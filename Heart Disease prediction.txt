@@ -35,4 +35,23 @@ This removes the bias caused by large or small values.
 
 All features are on a similar scale, so the model treats them equally.
 
+There are multiple models which we have used but the XGBoost is a ensemble method
+📌 What is XGBoost?
+XGBoost (Extreme Gradient Boosting) is a very powerful and fast machine learning algorithm often used in competitions and real-world projects. It's based on a technique called boosting, where multiple models are trained one after another, and each new model tries to fix the mistakes made by the previous ones.
+
+| Parameter               | Meaning                                                         |
+| ----------------------- | --------------------------------------------------------------- |
+| `learning_rate=0.01`    | The step size when learning (small = slower but more accurate). |
+| `n_estimators=25`       | Total number of trees to build.                                 |
+| `max_depth=15`          | Maximum depth of each tree (how detailed it can go).            |
+| `gamma=0.6`             | Minimum loss reduction required to make a further split.        |
+| `subsample=0.52`        | Fraction of the data used per tree (helps avoid overfitting).   |
+| `colsample_bytree=0.6`  | Percentage of features used for each tree.                      |
+| `reg_lambda=2`          | L2 regularization (reduces complexity to avoid overfitting).    |
+| `booster='dart'`        | Uses dropout (randomly skips trees) like in neural networks.    |
+| `colsample_bylevel=0.6` | Fraction of features used at each level of the tree.            |
+| `colsample_bynode=0.5`  | Fraction of features used per node split.                       |
+
+
+
 
