@@ -1,0 +1,38 @@
+Heart Disease prediction
+
+This model is used for prediction of a person has heart disease or not it will classify the person having heart disease with 1 or 0
+
+Here we have used the vecstack library which is used for advanced stacking of models(ensemble learning).
+
+We have also imported some more library like pandas - data loading and handling, numpy for numerical operations, matplotlib.pyplot for plotting graphs , scipy for scientific computations
+
+Here Counter is used to Count unique values in data (like how many people have disease vs don’t).
+
+Here the line after splitting the data is using the random_state when it is assigned the splitting of the data is done each time when you run the code.
+
+The word bias is used which means that (the model is giving importance to a feature)
+
+Some features (columns) have very large numerical values, while others have small values, which can unfairly influence the model.
+
+📊 Example:
+Let’s say you have two features:
+
+Age: ranges from 20 to 80
+
+Cholesterol level: ranges from 100 to 300
+
+Now imagine you feed them into a machine learning model without scaling:
+
+Cholesterol numbers are much larger than age.
+
+The model might "think" cholesterol is more important, just because the numbers are bigger — not because it really is.
+
+This introduces bias in learning.
+
+So here we use Standard Scaler which is used for scaling all features in the dataset such that they have  Mean = 0 or Standard deviation = 1 
+
+This removes the bias caused by large or small values.
+
+All features are on a similar scale, so the model treats them equally.
+
+
