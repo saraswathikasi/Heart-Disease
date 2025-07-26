@@ -53,5 +53,24 @@ XGBoost (Extreme Gradient Boosting) is a very powerful and fast machine learning
 | `colsample_bynode=0.5`  | Fraction of features used per node split.                       |
 
 
+Decision Tree Classifier
+
+It's a model that splits data into smaller subsets based on feature values, and then makes a prediction at the end (a "leaf").
+It is called a "tree" because:
+It starts at a root node (entire dataset).
+Splits the dataset using decision rules.
+Ends at leaf nodes (final class labels).
+
+1.Root Node	 : The top node representing the whole dataset.
+2.Internal Node	 : A feature-based question that splits the dataset.
+3.Leaf Node : 	Final prediction (class label).
+4. Gini / Entropy	Metrics : to measure how "pure" each split is (entropy = more precise).
+Here the criterion taken is entropy which is mainly used to measure the information gain for each split. Helps the tree make more informed, precise splits.
+Another option is gini, which is faster and simpler but slightly less accurate in some cases.It can handle both the numerical and categorical data same time.
+
+
+
+
+
 
 
