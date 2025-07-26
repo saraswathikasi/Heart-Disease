@@ -69,6 +69,20 @@ Here the criterion taken is entropy which is mainly used to measure the informat
 Another option is gini, which is faster and simpler but slightly less accurate in some cases.It can handle both the numerical and categorical data same time.
 
 
+The ROC_Curve
+roc_curve() is a function that helps measure how well a classification model is performing across different thresholds. It returns:
+False Positive Rate (FPR): How often the model wrongly predicts "positive" when it's actually "negative".
+True Positive Rate (TPR): How often the model correctly predicts "positive".
+Thresholds: The score values at which the classification decisions change.
+
+false_positive_rate	 : % of actual negatives wrongly predicted as positives
+true_positive_rate : 	% of actual positives correctly predicted
+threshold	: The score boundary for deciding between 0 and 1
+roc_curve()	 : Gives data for plotting ROC curve
+
+
+StackingClassifier is used to combine multiple models (called ensemble learning).The base models (nb, lr, svc) make their predictions first.The final_estimator=LogisticRegression() takes those predictions and learns how to combine them best to make a final prediction. Here cv=5 means during training, it uses 5-fold cross-validation to avoid overfitting.
+
 
 
 
